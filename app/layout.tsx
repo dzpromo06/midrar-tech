@@ -17,6 +17,9 @@ const spaceGrotesk = Space_Grotesk({
 export const metadata: Metadata = {
   title: "Midrar Technologies — Smart Remote Management for Agricultural Pivots",
   description: "Midrar Technologies builds intelligent remote management solutions for agricultural pivot irrigation systems. Engineered in Algeria.",
+  icons: {
+    icon: "/icon.png",
+  },
 };
 
 export default function RootLayout({
