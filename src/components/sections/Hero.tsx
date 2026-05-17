@@ -6,7 +6,7 @@ export function Hero() {
   return (
     <section id="top" className="relative min-h-screen flex items-center overflow-hidden bg-gradient-hero">
       <div
-        className="absolute inset-0 opacity-30 bg-cover bg-center"
+        className="absolute inset-0 opacity-20 bg-cover bg-center"
         style={{
           backgroundImage:
             "url('https://images.unsplash.com/photo-1625246333195-78d9c38ad449?auto=format&fit=crop&w=2000&q=80')",
@@ -14,7 +14,7 @@ export function Hero() {
       />
       <div className="absolute inset-0 bg-gradient-to-b from-primary/70 via-primary/60 to-primary" />
       <div
-        className="absolute -top-32 -right-32 w-[600px] h-[600px] rounded-full blur-3xl opacity-20"
+        className="absolute -top-32 -right-32 w-[600px] h-[600px] rounded-full blur-3xl opacity-30"
         style={{ background: "var(--gradient-accent)" }}
       />
 
@@ -37,20 +37,21 @@ export function Hero() {
               rel="noopener noreferrer"
               className="group inline-flex items-center gap-2 rounded-full bg-gradient-accent px-7 py-3.5 text-base font-semibold text-primary shadow-glow hover:opacity-95 transition"
             >
-              {t("hero.requestDemo")}
+              {t("hero.discover")}
               <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
             </a>
           </div>
         </div>
 
-        <div className="mt-20 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 max-w-5xl">
+        <div className="mt-20 grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl">
           {[
             { k: t("hero.stat_monitoring_k"), v: t("hero.stat_monitoring_v") },
             { k: t("hero.stat_ai_k"), v: t("hero.stat_ai_v") },
             { k: t("hero.stat_uptime_k"), v: t("hero.stat_uptime_v") },
           ].map((s) => (
-            <div key={s.v} className="border-l-2 border-[color:var(--brand-mint)]/60 pl-4 group hover:border-[color:var(--brand-mint)] transition-colors">
-              <div className="text-2xl md:text-3xl font-bold text-white group-hover:text-[color:var(--brand-mint)] transition-colors">{s.k}</div>
+            <div key={s.v} className="relative pl-4">
+              <div className="absolute left-0 top-0 bottom-0 w-0.5 bg-gradient-accent rounded-full" />
+              <div className="text-2xl md:text-3xl font-bold text-white">{s.k}</div>
               <div className="text-xs md:text-sm text-white/60 mt-1">{s.v}</div>
             </div>
           ))}

@@ -1,0 +1,9 @@
+{
+  "version": 2,
+  "framework": "nextjs",
+  "cleanUrls": true,
+  "regions": ["cdg1"],
+  "github": {
+    "silent": true
+  }
+}

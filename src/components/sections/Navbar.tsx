@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { useEffect, useState } from "react";
 import { Menu, X, ChevronDown } from "lucide-react";
 import logo from "@/assets/logo-horizontal.svg";
@@ -23,10 +24,10 @@ export function Navbar() {
   ];
 
   return (
-    <header className="fixed top-0 inset-x-0 z-50 transition-all bg-background/85 backdrop-blur-md border-b border-border shadow-sm">
+    <header className="fixed top-0 inset-x-0 z-50 transition-all bg-white border-b border-border shadow-sm">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 flex items-center justify-between h-16 md:h-20">
         <a href="#top" className="flex items-center">
-          <img src={logo} alt="Midrar Technologies" className="h-9 md:h-11 w-auto" />
+          <Image src={logo} alt="Midrar Technologies" className="h-9 md:h-11 w-auto" />
         </a>
         <nav className="hidden md:flex items-center gap-8">
           {translatedLinks.map((l) => (

@@ -1,10 +1,11 @@
 import { useTranslation } from "react-i18next";
+import Image from "next/image";
+import anabibLogo from "@/assets/anabib.png";
 
 export function Partners() {
   const { t } = useTranslation();
   const partners = [
-    { name: "Anabib", desc: t("p1.desc") },
-    { name: "Djezzy", desc: t("p2.desc") },
+    { name: "Anabib", desc: t("p1.desc"), logo: anabibLogo },
   ];
   return (
     <section id="partners" className="py-24 md:py-32 bg-secondary/40">
@@ -20,15 +21,17 @@ export function Partners() {
             {t("partners.desc")}
           </p>
         </div>
-        <div className="mt-14 grid sm:grid-cols-2 gap-6 max-w-3xl mx-auto">
+        <div className="mt-14 flex justify-center">
           {partners.map((p) => (
             <div
               key={p.name}
-              className="relative rounded-2xl border border-border bg-card p-10 text-center hover:shadow-card transition"
+              className="relative rounded-3xl border border-border bg-card p-10 md:p-14 text-center hover:shadow-card transition duration-500 max-w-md w-full"
             >
-              <div className="absolute inset-x-0 -top-px h-px bg-gradient-accent" />
-              <div className="text-3xl md:text-4xl font-bold text-gradient font-display">{p.name}</div>
-              <div className="mt-3 text-sm text-muted-foreground">{p.desc}</div>
+              <div className="mb-8 flex justify-center">
+                <Image src={p.logo} alt={p.name} className="h-24 md:h-32 w-auto object-contain" />
+              </div>
+              <div className="text-2xl md:text-3xl font-bold text-foreground mb-3">{p.name}</div>
+              <div className="text-sm md:text-base text-muted-foreground leading-relaxed">{p.desc}</div>
             </div>
           ))}
         </div>

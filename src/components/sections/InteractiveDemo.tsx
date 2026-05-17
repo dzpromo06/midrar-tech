@@ -62,14 +62,14 @@ export function InteractiveDemo() {
     <section className="py-24 bg-background overflow-hidden relative" id="interactive-demo">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <div className="inline-flex items-center px-4 py-2 border border-[color:var(--brand-mint)]/30 rounded-full text-[color:var(--brand-mint)] font-medium text-sm mb-6 bg-[color:var(--brand-mint)]/5">
+          <div className="inline-flex items-center px-4 py-2 border border-[color:var(--brand-mint)]/30 rounded-full text-[color:var(--brand-mint)] font-semibold text-xs mb-4 bg-[color:var(--brand-mint)]/5 tracking-wide">
             <Zap className="w-4 h-4 mr-2" />
             {t("demo.tag")}
           </div>
-          <h2 className="text-3xl lg:text-4xl font-bold text-foreground mb-4">
+          <h2 className="text-3xl md:text-5xl font-bold text-foreground">
             {t("demo.title")}
           </h2>
-          <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
+          <p className="mt-5 text-lg text-muted-foreground max-w-3xl mx-auto leading-relaxed">
             {t("demo.desc")}
           </p>
         </div>

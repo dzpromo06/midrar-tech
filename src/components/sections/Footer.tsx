@@ -1,3 +1,4 @@
+import Image from "next/image";
 import logo from "@/assets/logo-horizontal.svg";
 import { useTranslation } from "react-i18next";
 
@@ -9,7 +10,7 @@ export function Footer() {
         <div className="grid md:grid-cols-3 gap-10">
           <div>
             <div className="bg-white/95 inline-block rounded-xl p-3">
-              <img src={logo} alt="Midrar Technologies" className="h-9 w-auto" />
+              <Image src={logo} alt="Midrar Technologies" className="h-9 w-auto" />
             </div>
             <p className="mt-5 text-sm text-white/60 max-w-xs leading-relaxed">
               {t("footer.desc")}

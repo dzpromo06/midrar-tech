@@ -1,3 +1,4 @@
+import Image from "next/image";
 import pivotImg from "../../assets/pivot.webp";
 import { useTranslation } from "react-i18next";
 
@@ -37,7 +38,7 @@ export function Solution() {
               className="absolute -inset-6 rounded-3xl opacity-30 blur-2xl"
               style={{ background: "var(--gradient-accent)" }}
             />
-            <img
+            <Image
               src={pivotImg}
               alt="Center pivot irrigation system in a green field"
               className="relative rounded-3xl shadow-card w-full object-cover aspect-[4/5]"
