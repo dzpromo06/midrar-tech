@@ -29,8 +29,13 @@ export function Footer() {
             <h4 className="text-white font-semibold mb-4">{t("footer.contact")}</h4>
             <ul className="space-y-2 text-sm text-white/70">
               <li>
-                <a href="mailto:techmidar@gmail.com" className="hover:text-white">
-                  techmidar@gmail.com
+                <a href="mailto:contact@midrartech.com" className="hover:text-white">
+                  contact@midrartech.com
+                </a>
+              </li>
+              <li>
+                <a href="tel:0698203820" className="hover:text-white">
+                  0698203820
                 </a>
               </li>
               <li>Bordj Bou Arréridj, Algeria</li>
